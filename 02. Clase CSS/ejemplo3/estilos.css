@@ -1,20 +1,34 @@
 header{
     background-color: rgb(255, 0, 200);
     height: 100px;
+    margin-top: 20px;
 }
 
 h1{
     text-align: center;
     color: rgb(12, 8, 8);
-    margin-top: 20px;
+    padding-top: 20px;
 }
 
 article{
     background-color: aquamarine;
     padding: 10px;
     margin: 10px;
+    flex: 500px;
+    flex: 1 400px; /*Esto divide el ancho entre todos los elementos article*/
+    /*El "1" es un indicador de proporcionalidad*/
+    /*El "400px" indica el tamaño de los articles*/
 }
+
+article:nth-of-type(3){ /*El article 3 va a tener un flex 2*/
+    flex: 2;
+}
+
 
 section{
     display: flex;
+    /*flex-direction: column;  Esto para colocarlos como columnas los sections*/
+    flex-wrap: wrap; /*Se especificó en article que mínimo el flex es de 500px,
+                       por lo que esto hace que si la página se reduce, pueden fluir 
+                       en varias líneas*/
 }
