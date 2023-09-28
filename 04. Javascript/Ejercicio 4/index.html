@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Título de página</title>
+    <script>
+        function cambiarImagen(){
+            const imagen = document.getElementById("imagen").src; /*Se declara la variable imagen con su valor*/
+            /*const archivo = imagen == "01.jpg" ? "02.jpg" : "01.jpg";/*Si la imagen es 01.jpg, se convierte a 02.jpg, caso contrario, se cambia a 01.jpg*/
+            /*Otra forma de hacer el if*/
+            
+            if(imagen === '01.jpg'){
+                const archivo = '02.jpg';
+            }else{
+                const archivo = '01.jpg';
+            }
+            document.getElementById("imagen").src= archivo; /*Se imprimirá la imagen que no esté en pantalla*/
+        }
+    </script>
+</head>
+<body>
+    <h2>Título</h2>
+    <img src="01.jpg" width="500px" id="imagen"/>
+    <button onclick='cambiarImagen()'>Click acá para cambiar de imagen</button>
+    <button onclick='document.getElementById("imagen").style.display="none"'>Esconder</button>
+    <button onclick='document.getElementById("imagen").style.display="block"'>Mostrar</button>
+    <script>
+
+    </script>
+</body>
+</html>
