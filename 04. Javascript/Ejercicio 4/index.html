@@ -4,16 +4,15 @@
     <title>Título de página</title>
     <script>
         function cambiarImagen(){
-            const imagen = document.getElementById("imagen").src; /*Se declara la variable imagen con su valor*/
-            /*const archivo = imagen == "01.jpg" ? "02.jpg" : "01.jpg";/*Si la imagen es 01.jpg, se convierte a 02.jpg, caso contrario, se cambia a 01.jpg*/
-            /*Otra forma de hacer el if*/
-            
-            if(imagen === '01.jpg'){
-                const archivo = '02.jpg';
+            const imagen = document.getElementById("imagen").src; //Se declara la variable imagen con su valor. Además, el .src obtiene la imagen en si del img con el ID especificado
+            //const archivo = imagen == "01.jpg" ? "02.jpg" : "01.jpg";/*Si la imagen es 01.jpg, se convierte a 02.jpg, caso contrario, se cambia a 01.jpg
+            console.log(imagen) //Esto muestra mensaje en la consola web, para que podamos ver que es lo que se está mostrando al realizar uan acción, en este caso, hacer click al botón
+            //Otra forma de hacer el if
+            if(imagen === 'http://127.0.0.1:5500/Ejercicio%204/01.jpg'){ //No salía antes, pero con esta URL sí sale el cambio al hacer click al botón
+                document.getElementById("imagen").src = 'http://127.0.0.1:5500/Ejercicio%204/02.jpg';
             }else{
-                const archivo = '01.jpg';
+                document.getElementById("imagen").src = 'http://127.0.0.1:5500/Ejercicio%204/01.jpg';
             }
-            document.getElementById("imagen").src= archivo; /*Se imprimirá la imagen que no esté en pantalla*/
         }
     </script>
 </head>
