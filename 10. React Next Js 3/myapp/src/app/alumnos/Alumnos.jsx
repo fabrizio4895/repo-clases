@@ -32,7 +32,7 @@ const Alumnos = () => {
 
     return (        
         <>
-            <h1>Esta es la página oficial de alumnos</h1>
+            <h1>Esta es la página oficial de los alumnos</h1>
             
             <table className={styles.tabla}>
                 <thead>
