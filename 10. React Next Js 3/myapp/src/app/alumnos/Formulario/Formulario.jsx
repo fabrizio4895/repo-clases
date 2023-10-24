@@ -12,12 +12,10 @@ const Formulario = ({ onEnviar }) => { //Se coloca el props porque viene de otro
 
     const [alumno,setAlumno] = useState(alumnoInicial)
 
-
     const handleEnviar = () => { //Esta función te 
         console.log({alumno}); //Esto muestra en consola el alumno typeado
         onEnviar(alumno) //Acá onEnviar recibe al alumno y se ejecutará cuando se llame a la función handleenviar
     }
-
 
     const arr = [1,2,3]
 
@@ -51,5 +49,4 @@ const Formulario = ({ onEnviar }) => { //Se coloca el props porque viene de otro
         </>
     )
 }
-
 export default Formulario
