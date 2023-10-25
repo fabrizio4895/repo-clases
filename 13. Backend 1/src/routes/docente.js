@@ -13,7 +13,7 @@ routes.get('/', (req,res) => {
 
 routes.get('/', docenteController.findAll)
 
-//Para enviar datos nuevos es POST
+//Para generar un nuevo docente es POST
 routes.post('/', docenteController.create)
 
 //Para obtener información específica, en este caso, de un docente
