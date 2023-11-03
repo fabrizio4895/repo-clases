@@ -43,6 +43,7 @@ const update = (docente) => {
 }
 
 const remove = (id) => {
+    //findIndex devuelve el indice de donde se encuentra el docente que estamos buscando
     const index = docentes.findIndex(item => item.id == id);
 
     if (index > -1){

@@ -1,5 +1,4 @@
 import express from 'express'
-
 import docenteController from '../controllers/docente.js'
 
 const routes = express.Router() //express.Router permite definir las rutas
@@ -22,7 +21,7 @@ routes.get('/:id',docenteController.findOne)
 //Para actualizar datos de un docente
 routes.put('/', docenteController.update)
 
-//PAra eliminar un docente
+//Para eliminar un docente
 routes.delete('/:id', docenteController.remove)
 
 export default routes;

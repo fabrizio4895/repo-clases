@@ -1,7 +1,7 @@
 GET http://localhost:3001/docente
 #######
 
-GET http://localhost:3001/docente/4
+GET http://localhost:3001/docente/3
 
 #######
 POST http://localhost:3001/docente

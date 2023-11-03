@@ -1,5 +1,5 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+import bodyParser from 'body-parser'; //Para las solicitudes http
 import docenteRoutes from './routes/docente.js'
 
 var app = express(); //app representa al aplicativo
