@@ -1,6 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser'; //Para las solicitudes http
 import docenteRoutes from './routes/docente.js'
+import alumnoRoutes from './routes/alumno.js'
 
 var app = express(); //app representa al aplicativo
 app.use(bodyParser.json())
@@ -17,6 +18,8 @@ app.get('/docente', (req, res) => { //Se crea la ruta docente, cuando se busque 
 */
 
 app.use("/docente",docenteRoutes); //Para la ruta de /docente, utilizar las rutas aplicadas en docenteRoutes
+
+app.use("/alumno",alumnoRoutes); //Paralaruta/alumno se utilizará las rutas aplicadas en alumnoRoutes
 
 app.listen(3001, () => { //Puerto 3001, porque no pueden haber 2 aplicaciones corriendo en el mismo puerto
     console.log('Servidor iniciado.')
