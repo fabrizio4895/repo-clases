@@ -1,5 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors'
+
 import docenteRoutes from './routes/docente.js'
 import alumnoRoutes from './routes/alumno.js'
 import cursoRoutes from './routes/curso.js'
@@ -8,6 +10,8 @@ import matriculaRoutes from './routes/matricula.js'
 
 var app = express(); //app representa al aplicativo
 app.use(bodyParser.json())
+
+app.use(cors()) //Con esto, el api acepta solicitudes de cualquier ruta, del 3000 en este caso
 
 app.get('/',(req, res) => {
     return res.json({result: 'OK'})
