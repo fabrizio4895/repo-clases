@@ -1,13 +1,23 @@
 import repository from "../repository/carrera.js";
 
+<<<<<<< HEAD
 const findAll = async (req,res) => {
     const carrera = await repository.findAll(); //Esto trae el repositorio del arreglo
+=======
+const findAll = (req,res) => {
+    const carrera = repository.findAll(); //Esto trae el repositorio del arreglo
+>>>>>>> dc1b4b983662da9a00b270b41cb54d65ab11e65f
     return res.status(200).json(carrera); //status(200) indica que la solicitud ha tenido éxito
 }
 
 //Para crear un nuevo alumno en el repositorio
+<<<<<<< HEAD
 const create = async (req,res) => {
     const result = await repository.create(req.body); //Va a requerir un body en los tests
+=======
+const create = (req,res) => {
+    const result = repository.create(req.body); //Va a requerir un body en los tests
+>>>>>>> dc1b4b983662da9a00b270b41cb54d65ab11e65f
     return res.status(200).json(result);
 }
 

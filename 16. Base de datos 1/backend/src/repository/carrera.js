@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import modelo from '../model/carrera.js' //Esto exporta un modelo que está amarrado con sequelize
 
 let arr = [];
@@ -19,18 +20,49 @@ const create = async(object) => {
         console.error(err);
         return null;
     }
+=======
+let arr = [
+    {
+        id: 1,
+        nombre: "Ingeniería de Sistemas"
+    },{
+        id: 2,
+        nombre: "Derecho"
+    }
+]
+
+const findAll  = () => {
+    return arr;
+}
+
+//Crear curso
+const create = (object) => {
+>>>>>>> dc1b4b983662da9a00b270b41cb54d65ab11e65f
     arr.push(object)
     return object;
 }
 
+<<<<<<< HEAD
+=======
+//Encontrar un curso por el id
+>>>>>>> dc1b4b983662da9a00b270b41cb54d65ab11e65f
 const findOne = (id) => {
     const result = arr.find(x => x.id == id);
     return result;
 }
 
+<<<<<<< HEAD
 const update = (object) => {
     const index = arr.findIndex(item => item.id === object.id);
 
+=======
+//Para actualizar datos de un curso
+const update = (object) => {
+    //findIndex devuelve el indice de donde se encuentra el curso que estamos buscando
+    const index = arr.findIndex(item => item.id === object.id);
+
+    //Si encuentra un curso, ese curso encontrado pasa a ser el curso que se actualizara sus datos
+>>>>>>> dc1b4b983662da9a00b270b41cb54d65ab11e65f
     if (index > -1){
         arr[index] = object;
         return object;
