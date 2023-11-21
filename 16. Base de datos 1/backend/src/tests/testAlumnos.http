@@ -1,0 +1,35 @@
+//Para obtener los alumnos en total
+GET http://localhost:3001/alumno
+######
+
+//Para obtener información del alumno con el código en específico
+GET http://localhost:3001/alumno/20185467
+#####
+
+//Para insertar un nuevo alumno
+POST http://localhost:3001/alumno
+Content-Type: application/json
+
+{
+    "id": 20207632,
+    "nombre": "Romina",
+    "apellido": "Alvarez",
+    "carrera": "Medicina"
+}
+#####
+
+//Para modificarlos datos de un alumno en específico
+
+PUT http://localhost:3001/alumno
+Content-Type: application/json
+
+{
+    "id": 20185467,
+    "nombre": "Saul",
+    "apellido": "Goodman",
+    "carrera": "Derecho"
+}
+#####
+
+//Para eliminar un alumno del repositorio
+DELETE http://localhost:3001/alumno/20193489

@@ -1,0 +1,11 @@
+GET http://localhost:3001/carrera
+######
+
+POST http://localhost:3001/carrera
+Content-Type: application/json
+
+{
+    "nombre": "Ingeniería Eléctrica"
+}
+
+
